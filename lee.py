@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-from googleapiclient.discovery import build                     #For using Google Custom Search Engine API
-import datetime as dt                                           #Importing system date for the naming of the output file.
+from googleapiclient.discovery import build                     
+import datetime as dt                                         
 import sys                                                      
-from xlwt import Workbook                                       #For working on xls file.
-import re                                                       #For email search using regex.
+from xlwt import Workbook                                      
+import re                                                      
 
 if __name__ == '__main__':
     # Create an output file name in the format "srch_res_yyyyMMdd_hhmmss.xls in output folder"
@@ -15,9 +15,8 @@ if __name__ == '__main__':
     search_term = sys.argv[1]
     num_requests = int(sys.argv[2])
     
-    my_api_key = "replace_with_you_api_key"                 #Read readme.md to know how to get you api key.
-    my_cse_id = "011658049436509675749:gkuaxghjf5u"         #Google CSE which searches possible LinkedIn profile according to query.
-
+    my_api_key = "AIzaSyBLt824R1PzY6cNfVbD-rsCUVLVv7557e8"                
+    my_cse_id = "011658049436509675749:gkuaxghjf5u"        
     service = build("customsearch", "v1", developerKey=my_api_key)
 
     wb=Workbook()
